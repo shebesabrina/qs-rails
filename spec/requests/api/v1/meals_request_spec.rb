@@ -22,16 +22,18 @@ describe 'Meals API' do
     expect(Food.count).to eq(0)
 
     4.times do
-      breakfast.meal_foods.create(food_id: create(:food).id)
+      food = create(:food)
+      breakfast.foods << food
     end
-    id = create(:meal).id
 
-    get "/api/v1/meals/#{id}/foods"
+    get "/api/v1/meals/#{breakfast.id}/foods"
 
     expect(response).to be_success
 
-    foods = JSON.parse(response.body, symbolize_names: true)
-    expect(foods.count).to eq(breakfast.meal_foods.count)
+    meal_response = JSON.parse(response.body, symbolize_names: true)
+    foods = meal_response[:foods]
+    
+    expect(foods.count).to eq(breakfast.foods.count)
   end
 
   it 'creates a new meal id' do

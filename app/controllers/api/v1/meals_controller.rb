@@ -1,10 +1,23 @@
 class Api::V1::MealsController < ApplicationController
   def index
-    render json: Meal.all
+    meals = Meal.all
+    meals_and_foods = meals.map do |meal|
+      {
+        id: meal.id,
+        name: meal.name,
+        foods: meal.foods
+      }
+    end
+    render json: meals_and_foods
   end
 
   def show
-    render json: Meal.find(params[:id])
+    meal = Meal.find(params[:id])
+    render json: {
+      id: meal.id,
+      name: meal.name,
+      foods: meal.foods
+    }
   rescue
     render status: 404
   end
