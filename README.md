@@ -47,4 +47,4 @@ Once the server is running, visit API endpoints in your browser:
 ## Deployed
 * Back end is deployed here: https://qs-rails-mine.herokuapp.com/api/v1/foods
 
-* To see the [front end] visti: (https://shebesabrina.github.io/quantified-self-fe/index.html)
+* To see the [front end] visit: (https://shebesabrina.github.io/quantified-self-fe/index.html)
