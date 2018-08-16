@@ -1,25 +1,50 @@
-# README
+# Quantified Self Back-end Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Initial Setup
 
-Things you may want to cover:
+1. Clone this repository and rename the repository to `qs_rails` in one command
 
-* Ruby version
+  ```shell
+  https://shebesabrina.github.io/quantified-self-fe/index.html
+  ```
+2. Change directory into the `qs_rails` directory
+  ```
+  cd qs_rails
+  ```
 
-* System dependencies
+3. Install the dependencies
 
-* Configuration
+  ```shell
+  bundle
+  ```
 
-* Database creation
+3. Set up the database
 
-* Database initialization
+  ```shell
+  rake db:create
+  rake db:migrate
+  rake db:seed
+  ```
 
-* How to run the test suite
+4. Run test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+  ```shell
+    rspec
+  ```
 
-* Deployment instructions
+## Running the Server Locally
 
-* ...
-# qs-rails
+To see your code in action locally, you need to fire up a development server. Use the command:
+
+```shell
+rails s
+```
+
+Once the server is running, visit API endpoints in your browser:
+
+* `http://localhost:3000/` to run your application. Enpoints are available in the * [Project Spec](https://github.com/turingschool/backend-curriculum-site/blob/gh-pages/module4/projects/quantified-self/quantified-self.md)
+
+## Deployed
+* Back end is deployed here: https://qs-rails-mine.herokuapp.com/api/v1/foods
+
+* To see the [front end] visti: (https://shebesabrina.github.io/quantified-self-fe/index.html)
