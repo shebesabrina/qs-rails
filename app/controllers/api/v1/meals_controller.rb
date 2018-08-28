@@ -25,6 +25,7 @@ class Api::V1::MealsController < ApplicationController
   def create
     meal = Meal.find_by_id(params[:meal_id])
     food = Food.find_by_id(params[:id])
+    # binding.pry
     if meal.nil? || food.nil?
       render status: 404
     else
