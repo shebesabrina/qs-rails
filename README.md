@@ -42,7 +42,7 @@ rails s
 
 Once the server is running, visit API endpoints in your browser:
 
-* `http://localhost:3000/` to run your application. Enpoints are available in the * [Project Spec](https://github.com/turingschool/backend-curriculum-site/blob/gh-pages/module4/projects/quantified-self/quantified-self.md)
+* `http://localhost:3000/` to run your application. Enpoints are available in the * [Project Spec](http://backend.turing.io/module4/projects/quantified_self/quantified_self_rails)
 
 ## Deployed
 * Back end is deployed here: https://qs-rails-mine.herokuapp.com/api/v1/foods
